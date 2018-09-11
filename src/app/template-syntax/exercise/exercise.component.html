@@ -17,11 +17,11 @@
     <!--属性绑定-->
     <img [src]="" />
     <!--name为空时button不可点击-->
-    <button [disabled]="name === null" (click)="showName()">Alert Name</button>
+    <button [disabled]="!name" (click)="showName()">Alert Name</button>
     <!--给button添加class属性buttonClass-->
-    <button>Primary Button</button>
+    <button ngClass="primary-button">Primary Button</button>
     <!--给文字设置内联样式spanStyle-->
-    <p [style.color]="'red'">
+    <p [style.color]="'pink'" [style.font-size]="'20px'">
       Set font style for span:
       <span>name</span>
     </p>
