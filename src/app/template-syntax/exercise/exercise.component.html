@@ -44,8 +44,8 @@
   <button (click)="hidden=!hidden">{{hidden ? '显示': '隐藏'}}</button>
 
   <!--显示隐藏p元素-->
-  <p>hello world </p>
+  <p *ngIf="!hidden">hello world </p>
 
   <!--重复器指令显示列表names-->
-  <p>Hello, xxx</p>
+  <p *ngFor="let name of names">Hello, {{name}}</p>
 </section>
