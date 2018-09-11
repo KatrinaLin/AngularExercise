@@ -3,21 +3,21 @@
   <h1>绑定</h1>
   <p>
     <!--用插值表达式显示名字-->
-    Hello, xxx
+    Hello, {{ name }}
     <!--用插值表达式替换图片路径-->
-    <img src="" />
+    <img src="{{imageUrl}}" />
   </p>
 
   <p>
     <!--用插值表达式/或者方法输出名字的长度-->
-    Your name length is xxx
+    Your name length is {{getNameLength()}}
   </p>
 
   <div>
     <!--属性绑定-->
     <img [src]="" />
     <!--name为空时button不可点击-->
-    <button [disabled]="false" (click)="showName()">Alert Name</button>
+    <button [disabled]="name === null" (click)="showName()">Alert Name</button>
     <!--给button添加class属性buttonClass-->
     <button>Primary Button</button>
     <!--给文字设置内联样式spanStyle-->
@@ -29,12 +29,12 @@
 
   <div>
     <!--双向数据绑定输入name-->
-    <input placeholder="输入name" />
+    <input placeholder="输入name" [(ngModel)]="name"/>
   </div>
 
   <div>
     <!--点击button触发clearName方法-->
-    <button>Clear Name</button>
+    <button (click)="clearName()">Clear Name</button>
   </div>
 </section>
 

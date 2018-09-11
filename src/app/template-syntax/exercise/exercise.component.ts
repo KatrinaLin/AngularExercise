@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExerciseComponent implements OnInit {
 
-  name;
+  name = "ThoughtWorker";
   imageUrl = 'http://www.wpclipart.com/cartoon/people/hero/hero_silhoutte_T.png';
   buttonClass = {
     'button': true,
@@ -36,5 +36,9 @@ export class ExerciseComponent implements OnInit {
       'font-size': '20px',
       'color': 'blue'
     };
+  }
+
+  getNameLength() {
+    return this.name ? this.name.length : 0;
   }
 }
