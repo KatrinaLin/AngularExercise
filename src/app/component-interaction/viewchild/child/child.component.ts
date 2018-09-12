@@ -18,6 +18,7 @@ export class ViewChildInteractionChildComponent {
   startOver() {
     this.step = 0;
     this.stepArray = [];
+    this.isQuited = false;
   }
 
   onQuit() {
