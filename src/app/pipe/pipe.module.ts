@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ExerciseComponent } from './exercise/exercise.component';
 import { RouterModule } from '@angular/router';
+import { NamePipe } from './exercise/name.pipe';
 
 @NgModule({
   imports: [
@@ -11,6 +12,6 @@ import { RouterModule } from '@angular/router';
       component: ExerciseComponent
     }])
   ],
-  declarations: [ExerciseComponent]
+  declarations: [ExerciseComponent, NamePipe]
 })
 export class PipeModule { }

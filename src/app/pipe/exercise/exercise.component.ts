@@ -20,4 +20,15 @@ export class ExerciseComponent {
     this.toggle = !this.toggle;
   }
 
+  value = "should create pipe";
+  useUnderscore = true;
+
+  get nameFormat()   {
+    return this.useUnderscore ? 'underscore' : 'camelCase';
+  }
+
+  toggleNameFormat() {
+    this.useUnderscore = !this.useUnderscore;
+  }
+
 }
