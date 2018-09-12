@@ -12,6 +12,7 @@ import { ChildBService } from './child-b.service';
 })
 export class ChildBComponent implements OnInit {
 
+
   constructor(
     public rootService: RootService,
     public moduleService: ModuleService,

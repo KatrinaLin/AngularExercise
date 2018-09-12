@@ -4,9 +4,9 @@
 </section>
 
 <!--组件ChildA-->
-<app-child-a [sharedValue]="sharedValue"></app-child-a>
+<app-child-a [sharedValue]="sharedValue" [valueA]="valueA"></app-child-a>
 <!--组件ChildB-->
-<app-child-b></app-child-b>
+<app-child-b [sharedValue]="sharedValue"></app-child-b>
 
 <section>
   <button (click)="updateSharedValue()" *ngIf="hasItemA || hasItemB">更新sharedValue</button>

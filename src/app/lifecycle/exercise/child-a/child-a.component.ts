@@ -11,6 +11,9 @@ export class ChildAComponent implements OnInit {
   @Input()
   sharedValue = null;
 
+  @Input()
+  valueA = null;
+
   constructor() { }
 
   ngOnInit() {
