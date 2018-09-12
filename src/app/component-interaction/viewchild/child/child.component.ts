@@ -21,6 +21,6 @@ export class ViewChildInteractionChildComponent {
   }
 
   onQuit() {
-    // TODO: quit game
+    this.isQuited = true;
   }
 }
