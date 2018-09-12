@@ -11,7 +11,7 @@ export class ViewChildInteractionComponent {
   constructor() { }
 
   nextStep() {
-    // TODO: next step
+    this.childComponent.nextStep();
   }
 
   startOver() {

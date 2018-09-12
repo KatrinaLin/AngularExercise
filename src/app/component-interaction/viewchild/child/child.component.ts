@@ -11,7 +11,8 @@ export class ViewChildInteractionChildComponent {
   stepArray = [];
 
   nextStep() {
-    // TODO: next step
+    this.step++;
+    this.stepArray = Array.from(new Array(this.step), (value, index) => index);
   }
 
   startOver() {
