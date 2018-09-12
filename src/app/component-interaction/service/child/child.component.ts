@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { StepService } from '../step.service';
 
 @Component({
@@ -7,16 +7,20 @@ import { StepService } from '../step.service';
   styleUrls: ['../../event/child/child.component.css']
 })
 export class ServiceInteractionChildComponent implements OnInit {
-  step;
+
+  step = 0;
   stepArray = [];
 
   constructor(private stepService: StepService) { }
 
   ngOnInit() {
-    // TODO: subscribe next step in step service
+    this.stepService.step$.subscribe(step => {
+      this.step = step;
+      this.stepArray = Array.from(new Array(this.step), (value, index) => index);
+    });
   }
 
   onQuit() {
-    // TODO: on quite
+    this.stepService.onQuite(true);
   }
 }

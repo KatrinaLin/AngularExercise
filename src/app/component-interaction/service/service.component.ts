@@ -8,18 +8,22 @@ import { StepService } from './step.service';
 })
 export class ServiceInteractionComponent implements OnInit{
   isQuited = false;
+  step = 0;
 
   constructor(private stepService: StepService) { }
 
   ngOnInit (): void {
-    // TODO: subscribe on quite in step service
+    this.stepService.onQuit$.subscribe(isQuited => this.isQuited = isQuited);
   }
 
   nextStep() {
-    // TODO: next step
+    this.stepService.nextStep(++this.step);
   }
 
   startOver() {
-    // TODO: start over
+    this.step = 0;
+    this.isQuited = false;
+    this.stepService.nextStep(this.step);
+    this.stepService.onQuite(this.isQuited);
   }
 }
