@@ -15,7 +15,7 @@ export class ViewChildInteractionComponent {
   }
 
   startOver() {
-    // TODO: start over
+    this.childComponent.startOver();
   }
 
   isQuited() {
