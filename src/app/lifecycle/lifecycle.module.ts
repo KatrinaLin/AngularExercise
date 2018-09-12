@@ -5,6 +5,8 @@ import { ExampleComponent } from './example/example.component';
 import { ItemComponent } from './example/item/item.component';
 import { SharedModule } from '../shared/shared.module';
 import { ExerciseComponent } from './exercise/exercise.component';
+import { ChildAComponent } from './exercise/child-a/child-a.component';
+import { ChildBComponent } from './exercise/child-b/child-b.component';
 
 @NgModule({
   imports: [
@@ -19,6 +21,6 @@ import { ExerciseComponent } from './exercise/exercise.component';
       component: ExerciseComponent
     }])
   ],
-  declarations: [ExampleComponent, ExerciseComponent, ItemComponent]
+  declarations: [ExampleComponent, ExerciseComponent, ItemComponent, ChildAComponent, ChildBComponent]
 })
 export class LifecycleModule { }

@@ -7,9 +7,11 @@ import { LoggerService } from '../../shared/logger.service';
   styleUrls: [ '../example/example.component.css' ],
 })
 export class ExerciseComponent implements OnInit {
-  hasItemA = false;
-  hasItemB = false;
+  hasItemA = true;
+  hasItemB = true;
   hookLog: string[];
+
+  sharedValue = "sharedValue";
 
   constructor (public logger: LoggerService) {
     this.hookLog = logger.logs;
