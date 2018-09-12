@@ -7,18 +7,21 @@ import { Component } from '@angular/core';
 })
 export class LocalVariableInteractionChildComponent {
   isQuited = false;
-  step;
+  step = 0;
   stepArray = [];
 
   nextStep() {
-    // TODO: next step
+    this.step++;
+    this.stepArray = Array.from(new Array(this.step), (value, index) => index);
   }
 
   startOver() {
-    // TODO: start over
+    this.step = 0;
+    this.stepArray = [];
+    this.isQuited = false;
   }
 
   onQuit() {
-    // TODO: quit game
+    this.isQuited = true;
   }
 }
